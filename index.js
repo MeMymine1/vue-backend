@@ -38,8 +38,6 @@ MongoClient.connect(
 // Logger middleware
 app.use(morgan('common'));
 
-// Static file middleware for lesson images
-app.use('/images', express.static(path.join(__dirname, 'images')));
 
 //display a message for root path to show tha API is working
 app.get("/", (req, res, next) => {
