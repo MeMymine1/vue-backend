@@ -1,8 +1,13 @@
 {
+  "name": "express-app-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "express": "^4.19.2",
     "mongodb": "^3.7.4",
-    "morgan": "^1.10.0",
-    "package.js": "^1.1.3"
+    "morgan": "^1.10.0"
   }
 }
