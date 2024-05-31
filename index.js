@@ -39,16 +39,7 @@ MongoClient.connect(
 app.use(morgan('common'));
 
 // Static file middleware for lesson images
-app.use('/images', (req, res, next) => {
-  const imagePath = path.join(__dirname, 'images', req.url);
-  fs.access(imagePath, fs.constants.F_OK, (err) => {
-      if (err) {
-          res.status(404).send('Image not found');
-      } else {
-          res.sendFile(imagePath);
-      }
-  });
-});
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 //display a message for root path to show tha API is working
 app.get("/", (req, res, next) => {
